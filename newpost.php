@@ -171,8 +171,8 @@ else if(isset($_POST['text']))
 //Heres our input form so users can add more posts
 print  "<table border=1 width=345 $themesettings[tableAttributes] class=\"table\">
 	<form method=\"post\">
-	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">reply</th></tr>
-	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>text:</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
+	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">Replying to post</th></tr>
+	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>Enter your Post</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
 	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;
 		<input type=submit name=\"action\" value=Submit>
 		<input type=submit name=\"action\" value=Preview>
