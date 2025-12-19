@@ -68,17 +68,16 @@ $newtopic="<span class=\"smalltext\" style=\"float: right\"><a href=newthread.ph
 
 
 
-print "<a href=index.php>minibord</a> - $forumname[name]$newtopic<br>$pagelist";
+print "<a href=index.php>Forum Index</a> - $forumname[name]$newtopic<br><br>$pagelist<br>";
 
 
 //Lets start our threads table
 print  "<table $themesettings[tableAttributes] class=\"table\">
 	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=16></th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\">Topic Title</th>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Topic Starter</th>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Last Poster</td>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>Last Action</th>  
-	<th nowrap $themesettings[thRegularAttributes] class=\"thRegular\" width=80>Replies</th>";
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" align=left>Topic Title</th>  
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Topic Starter</th>    
+	<th nowrap $themesettings[thRegularAttributes] class=\"thRegular\" width=80>Replies</th>  
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>Last Action</th>";
 
 //lets go through our topic data and spit it out
 while($thread=mysqli_fetch_array($threads))
@@ -150,21 +149,18 @@ while($thread=mysqli_fetch_array($threads))
 
 	//spit out all the data in a nice table
 	print "<tr>
-	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">$new</td>
+	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\" align=center>$new</td>
 	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><a href=thread.php?id=$thread[id]>$thread[name]</a></td>
-	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">".getusername($thread['userid'])."</td>
-	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">$lasthuman</td>
-	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastreplydate</td>
-	  <td width=70 $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$postnum</td>
+	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\" align=center>".getusername($thread['userid'])."</td>
+	  <td width=70 $themesettings[tdStyle1Attributes] class=\"tdStyle2\" align=center>$postnum</td>
+	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\" align=center>$lastreplydate<br>Last Post by: $lasthuman</td>  
 	</tr>
 	";
 
 }
 
 //Lets wrap this table and page up
-print "</table>";
-
-print "$pagelist<a href=index.php>minibord</a> - $forumname[name]$newtopic<br><br>";
+print "</table><br>";
 
 printfooter();
 
