@@ -82,7 +82,7 @@ if(!empty($_POST['text']) && !empty($_POST['action']) && $_POST['action'] == "Su
 	mysqli_stmt_execute($stmt);
 
 	//print message
-	printmessage("Reply has been posted!<br>Click <a href=topic.php?id=$id>here</a> to return to the thread");
+	printmessage("Reply has been posted!<br>Click <a href=thread.php?id=$id>here</a> to return to the thread");
 
 	printfooter();
 	die();
@@ -90,7 +90,7 @@ if(!empty($_POST['text']) && !empty($_POST['action']) && $_POST['action'] == "Su
 
 
 //print the topic name and a link back to the topic list
-print "<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - <a href=topic.php?id=$id>$thread[name]</a> - new post<br><br>";
+print "<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - <a href=thread.php?id=$id>$thread[name]</a> - new post<br><br>";
 
 
 if(!empty($_POST['text']) && !empty($_POST['action']) && $_POST['action'] == "Preview")
@@ -213,7 +213,7 @@ while($post=mysqli_fetch_array($posts))
 //End the post table
 print "</table><br>";
 //print the topic name and a link back to the topic list
-print "<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - <a href=topic.php?id=$id>$thread[name]</a> - new post<br><br>";
+print "<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - <a href=thread.php?id=$id>$thread[name]</a> - new post<br><br>";
 
 
 	
