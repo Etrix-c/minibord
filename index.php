@@ -46,11 +46,11 @@ else if(!empty($_GET['action']) && $_GET['action'] == "markallforumsread")
 
 print "<table $themesettings[tableAttributes] class=\"table\">
 	<tr><th $themesettings[thRegularAttributes] class=\"thRegular\" width=32></th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\">forum name</th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=90># threads</th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=80># posts</th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>last human</th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>last post</th></tr>";
+	<th $themesettings[thRegularAttributes] class=\"thRegular\">Forum</th>
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=90>Topics</th>
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=80>Replies</th>
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Last Poster</th>
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>Last Post Info</th></tr>";
 
 
 $categories=mysqli_query($sql, "SELECT * FROM `categories` ORDER BY `displayorder`");
