@@ -96,7 +96,7 @@ if(!empty($_POST['text']) && !empty($_POST['name']) && !empty($_POST['action']) 
 	mysqli_stmt_execute($stmt);
 
 	//print message
-	printmessage("Topic has been posted!<br>Click <a href=topic.php?id=$threadid>here</a> to return to go to the thread");
+	printmessage("Topic has been posted!<br>Click <a href=thread.php?id=$threadid>here</a> to return to go to the thread");
 
 	printfooter();
 	die();
