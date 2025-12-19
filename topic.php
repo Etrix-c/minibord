@@ -27,7 +27,7 @@ if(!empty($user))
 {
 	$date=time();
 	mysqli_query($sql,"INSERT INTO `lastthreadread` (`userid`, `threadid`, `date`) VALUES ('$user[id]', $id, $date) ON DUPLICATE KEY UPDATE `date` = $date");
-	$newpost="<span class=\"smalltext\" style=\"float: right\"><a href=newpost.php?id=$id>new post</a></span>";
+	$newpost="<span class=\"smalltext\" style=\"float: right\"><a href=newreply.php?id=$id>new post</a></span>";
 
 }
 
@@ -133,7 +133,7 @@ if(!empty($user))
 {
 //Heres our input form so users can add more posts
 print  "<table border=1 width=345 $themesettings[tableAttributes] class=\"table\">
-	<form method=\"post\" action=\"newpost.php?id=$id\">
+	<form method=\"post\" action=\"newreply.php?id=$id\">
 	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">quick reply</th></tr>
 	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>text:</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
 	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;
