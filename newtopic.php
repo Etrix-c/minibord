@@ -163,7 +163,7 @@ else if(!empty($_POST['text']) && !empty($_POST['name']) && !empty($_POST['actio
 		$_POST['text']=showsmilies($_POST['text']);
 	}
 
-	print  "<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">topic preview</th></tr>
+	print  "<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">Preview Topic</th></tr>
 		<tr><td colspan=2 $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><b>".htmlspecialchars($_POST['name'])."</b></th></tr>
 		<tr><td rowspan=2 valign=top nowrap  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=200>".getusername($user['id'])."$title<br>$avatar</td>
 		<td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" valign=top>$user[postheader]".nl2br($_POST['text'],false)."<br><br>$user[postfooter]</td></tr>
@@ -201,10 +201,10 @@ else if(empty($_POST['text']) && empty($_POST['name']) && !empty($_POST['action'
 //Heres our input form so users can add a new topic
 print  "<table border=1 width=345 $themesettings[tableAttributes] class=\"table\">
 	<form method=\"post\">
-	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">new topic</th></tr>
-	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>name:</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<input type=\"text\" maxlength=100 name=\"name\" value=\"$whoopsname\"></td></tr>
+	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">Post a new topic</th></tr>
+	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>Topic Title</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<input type=\"text\" maxlength=100 name=\"name\" value=\"$whoopsname\"></td></tr>
 
-	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>text:</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
+	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>Enter your Post</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
 	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;
 		<input type=submit name=\"action\" value=Submit>
 		<input type=submit name=\"action\" value=Preview>
