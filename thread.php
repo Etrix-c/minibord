@@ -27,7 +27,7 @@ if(!empty($user))
 {
 	$date=time();
 	mysqli_query($sql,"INSERT INTO `lastthreadread` (`userid`, `threadid`, `date`) VALUES ('$user[id]', $id, $date) ON DUPLICATE KEY UPDATE `date` = $date");
-	$newpost="<span class=\"smalltext\" style=\"float: right\"><a href=newreply.php?id=$id>new post</a></span>";
+	$newpost="<span class=\"smalltext\" style=\"float: right\"><a href=newreply.php?id=$id>Add Reply</a></span>";
 
 }
 
@@ -66,7 +66,7 @@ for($i = 0; $i <= $numpages; $i++)
 $pagelist.="</div>";
 
 //print the topic name and a link back to the topic list
-print "<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - $thread[name]$newpost<br>$pagelist";
+print "<a href=index.php>Forum Index</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - $thread[name]$newpost<br><br>$pagelist<br>";
 
 
 //Now lets grab our posts and order them by the date they were submitted
@@ -118,31 +118,14 @@ while($post=mysqli_fetch_array($posts))
 
 
 	//Print each post; use nl2br() to process line breaks so they look right
-	print  "<tr><td rowspan=2 valign=top nowrap  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=200>".getusername($post['userid'])."$title<br>$avatar</td>
+	print  "<tr><td rowspan=2 valign=top nowrap  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=200 align=center>".getusername($post['userid'])."$title<br>$avatar</td>
 		<td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" valign=top>$userdata[postheader]".nl2br($post['text'],false)."<br><br>$userdata[postfooter]</td></tr>
 		<tr><td nowrap  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" height=10>Date: ".date("Y-m-d H:i:s", $post['date'])."</td></tr>";
 }
 
 //End the post table
-print "</table>";
+print "</table><br>";
 //print the topic name and a link back to the topic list
-
-print "$pagelist<a href=index.php>minibord</a> - <a href=forum.php?id=$thread[forumid]>$thread[forumname]</a> - $thread[name]$newpost<br><br>";
-
-if(!empty($user))
-{
-//Heres our input form so users can add more posts
-print  "<table border=1 width=345 $themesettings[tableAttributes] class=\"table\">
-	<form method=\"post\" action=\"newreply.php?id=$id\">
-	<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">quick reply</th></tr>
-	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=100>text:</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp<textarea cols=21 name=\"text\">$whoopstext</textarea></td></tr>
-	<tr><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;</td><td  $themesettings[tdStyle1Attributes] class=\"tdStyle1\">&nbsp;
-		<input type=submit name=\"action\" value=Submit>
-		<input type=submit name=\"action\" value=Preview>
-		<input type=\"checkbox\" name=\"disablesmilies\" value=\"1\">Disable Smilies
-	</td></td></tr></form></table><br>";
-
-}
 
 //print our footer and call it a day
 printfooter();
