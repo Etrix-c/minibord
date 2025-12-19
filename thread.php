@@ -60,7 +60,7 @@ for($i = 0; $i <= $numpages; $i++)
 	if($i == $page)
 		$pagelist.="$p ";
 	else
-		$pagelist.="<a href=topic.php?id=$id&page=$i>$p</a> ";
+		$pagelist.="<a href=thread.php?id=$id&page=$i>$p</a> ";
 
 }
 $pagelist.="</div>";
