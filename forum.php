@@ -61,7 +61,7 @@ $forumname=mysqli_fetch_array(mysqli_query($sql, "SELECT `name` FROM `forums` WH
 $newtopic="";
 if(!empty($user))
 {
-$newtopic="<span class=\"smalltext\" style=\"float: right\"><a href=newtopic.php?id=$id>new topic</a></span>";
+$newtopic="<span class=\"smalltext\" style=\"float: right\"><a href=newtopic.php?id=$id>New Topic</a></span>";
 
 }
 
@@ -74,11 +74,11 @@ print "<a href=index.php>minibord</a> - $forumname[name]$newtopic<br>$pagelist";
 //Lets start our threads table
 print  "<table $themesettings[tableAttributes] class=\"table\">
 	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=16></th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\">topic name</th>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>human name</th>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>last human</td>  
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>last reply</th>  
-	<th nowrap $themesettings[thRegularAttributes] class=\"thRegular\" width=80># posts</th>";
+	<th $themesettings[thRegularAttributes] class=\"thRegular\">Topic Title</th>  
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Topic Starter</th>  
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Last Poster</td>  
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>Last Action</th>  
+	<th nowrap $themesettings[thRegularAttributes] class=\"thRegular\" width=80>Replies</th>";
 
 //lets go through our topic data and spit it out
 while($thread=mysqli_fetch_array($threads))
