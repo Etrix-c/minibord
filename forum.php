@@ -151,7 +151,7 @@ while($thread=mysqli_fetch_array($threads))
 	//spit out all the data in a nice table
 	print "<tr>
 	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">$new</td>
-	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><a href=topic.php?id=$thread[id]>$thread[name]</a></td>
+	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><a href=thread.php?id=$thread[id]>$thread[name]</a></td>
 	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">".getusername($thread['userid'])."</td>
 	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle2\">$lasthuman</td>
 	  <td nowrap $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastreplydate</td>
