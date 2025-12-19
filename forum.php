@@ -61,7 +61,7 @@ $forumname=mysqli_fetch_array(mysqli_query($sql, "SELECT `name` FROM `forums` WH
 $newtopic="";
 if(!empty($user))
 {
-$newtopic="<span class=\"smalltext\" style=\"float: right\"><a href=newtopic.php?id=$id>New Topic</a></span>";
+$newtopic="<span class=\"smalltext\" style=\"float: right\"><a href=newthread.php?id=$id>New Topic</a></span>";
 
 }
 
