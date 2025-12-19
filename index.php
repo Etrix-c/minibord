@@ -46,10 +46,9 @@ else if(!empty($_GET['action']) && $_GET['action'] == "markallforumsread")
 
 print "<table $themesettings[tableAttributes] class=\"table\">
 	<tr><th $themesettings[thRegularAttributes] class=\"thRegular\" width=32></th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\">Forum</th>
+	<th $themesettings[thRegularAttributes] class=\"thRegular\" align=left>Forum</th>
 	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=90>Topics</th>
 	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=80>Replies</th>
-	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=150>Last Poster</th>
 	<th $themesettings[thRegularAttributes] class=\"thRegular\" width=200>Last Post Info</th></tr>";
 
 
@@ -129,8 +128,7 @@ while($category=mysqli_fetch_array($categories))
 
 			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><a href=forum.php?id=$forum[id]>$forum[name]</a><br><div class=\"smalltext\">$forum[description]</div></td>
 			   <td $themesettings[tdStyle2Attributes] class=\"tdStyle2\">$numthreads</td><td $themesettings[tdStyle2Attributes] class=\"tdStyle2\">$numposts</td>
-			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostuser</td>
-			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostdate</td></tr>";
+			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostdate<br>Last Post by: $lastpostuser</td></tr>";
 				
 	}
 
