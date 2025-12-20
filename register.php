@@ -42,7 +42,7 @@ if(!empty($_POST['username']))
 
 if(!empty($user))
 {
-	printmessage("you cannot register while logged in");
+	printmessage("You cannot register while logged in");
 	printfooter();
 	die();
 	
@@ -50,13 +50,13 @@ if(!empty($user))
 
 else if($isnametaken)
 {
-	printmessage("that username is in use!");
+	printmessage("Username is in use!");
 
 }
 
 else if($accountsonip >=2)
 {
-	printmessage("you can't make more than 2 accounts per ip!");
+	printmessage("You can't make more than 2 accounts per ip!");
 	printfooter();
 	die();
 	
@@ -79,8 +79,8 @@ else if(!empty($_POST['username']) && !empty($_POST['password']) )
 	mysqli_stmt_execute($stmt1);
 
 
-	printmessage("Your account has been successfully added.<br><br>
-			Click <a href=login.php>here</a> to login to the site.<br>");
+	printmessage("Your account has been successfully made.<br><br>
+			Click <a href=login.php>here</a> to log in.<br>");
 			
 	$showinputboxes=false;
 
@@ -103,7 +103,7 @@ else if(empty($_POST['username']) && !empty($_POST['password']))
 
 else if(isset($_POST['username']) && isset($_POST['password']) )
 {
-	printmessage("thou must type before submitting");
+	printmessage("Field must be type before submitting");
 }
 
 
@@ -113,9 +113,9 @@ if($showinputboxes)
 	//lets create our input table
 	print  "<form method=\"post\" action=register.php>
 		<table $themesettings[tableAttributes] class=\"table\">
-		<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">register</th></tr>
-		<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=200>human name:</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><input type=text length=25 width=25 name=username value=\"$whoopsuser\"></td></tr>
-		<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">password:</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><input type=password length=70 width=25 name=password></td></tr>
+		<tr><th colspan=2 $themesettings[thRegularAttributes] class=\"thRegular\">Registration Form</th></tr>
+		<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" width=200>Please enter a name</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><input type=text length=25 width=25 name=username value=\"$whoopsuser\"></td></tr>
+		<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">Please make a password</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><input type=password length=70 width=25 name=password></td></tr>
 		<tr><td colspan=2 $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><input type=submit value=Submit></tr>
 		</table>
 		</form>";
