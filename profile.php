@@ -78,7 +78,7 @@ $lastpost=mysqli_fetch_array(mysqli_query($sql, "SELECT `posts`.`date`, `threads
 	$lastpostdate="<i>No Posts</i>";
 	if(!empty($lastpost['date']))
 	{
-		$lastpostdate=date("Y-m-d H:i:s", $lastpost['date'])." in <a href=topic.php?id=$lastpost[threadid]>$lastpost[name]</a>";
+		$lastpostdate=date("Y-m-d", $lastpost['date'])." in <a href=topic.php?id=$lastpost[threadid]>$lastpost[name]</a>";
 	}
 
 	$title="<br>";
@@ -90,13 +90,13 @@ $lastpost=mysqli_fetch_array(mysqli_query($sql, "SELECT `posts`.`date`, `threads
 
 
 print "<table $themesettings[tableAttributes] class=\"table\" >
-	<tr><th colspan=2 $themesettings[thRegularAttributes]  class=\"thRegular\" >Profile for $userdata[name]</th></tr>
+	<tr><th colspan=2 $themesettings[thRegularAttributes]  class=\"thRegular\" >Viewing $userdata[name]'s Profile</th></tr>
 
-	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\" width=200># posts</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$userdata[numposts]</td></tr>
-	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\"># threads</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$userdata[numthreads]</td></tr>
-	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">registered on</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">".date("Y-m-d H:i:s", $userdata['regdate'])."</td></tr>
-	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">last post</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostdate</td></tr>
-	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">last page view</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastview</td></tr>
+	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\" width=200>Total Posts</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$userdata[numposts]</td></tr>
+	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Total Threads</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$userdata[numthreads]</td></tr>
+	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Join Date</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">".date("Y-m-d H:i:s", $userdata['regdate'])."</td></tr>
+	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Recent Post</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostdate</td></tr>
+	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Last Seen</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastview</td></tr>
 	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Birthday</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$birthday</td></tr>
 	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Homepage</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$homepage</td></tr>
 	<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\" class=\"thRegular\">Email</td><td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$email</td></tr>
