@@ -24,7 +24,7 @@ function printfooter()
 
 //echo "<p>Query executed in ".$exec_time_row[1].' seconds';
 	
-	print "</div><div class=\"footer\">minibord v1.03 - lots 'o junkz plus optional html after a decent hiatus edition <a href=https://github.com/NinCollin/minibord>(github)</a><br>PHP execution time: $rendertime</div>";
+	print "</div><div class=\"footer\">Powered By FFXIBord [v:0.1B] | A fork of minibord <a href=https://github.com/NinCollin/minibord>minibord</a><br>PHP execution time: $rendertime</div>";
 }
 
 
