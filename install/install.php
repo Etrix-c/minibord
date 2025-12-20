@@ -5,9 +5,9 @@
 
 $servername = "localhost";
 $username = "root"; // Use a user with sufficient permissions
-$password = "your_mysql_password";
-// Connect without specifying a database name initially
-$conn = mysqli_connect($servername, $username, $password);
+$password = 'your_mysql_password';
+$database = "database-name";
+$conn = mysqli_connect($servername, $username, $password, database);
 
 // Check connection
 if (!$conn) {
