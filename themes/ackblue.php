@@ -10,7 +10,7 @@ $themesettings = array(
 	"styletag" => "
 		<style>
 		html * {font-family: veranda;}
-		.body { background-image: url(\"images/bgack.png\"); }
+		.body {width: 950px; margin: auto; padding-top: 30px; padding-left: 5px; padding-right: 5px; background-image: url(\"images/bgack.png\"); }
 		
 		.header { width: 100%;}
 		.tableHeader {border: solid 1px #C7E1FF; border-collapse: collapse; width: 100%;}
@@ -25,10 +25,10 @@ $themesettings = array(
 		.content {width: 100%;}
 		
 		.table {border: solid 1px #C7E1FF; border-collapse: collapse; width: 100%;}
-		.thRegular {background: #4E6D91; border: solid 1px #C7E1FF;}
-		.thCategory {background: #4E6D91; border: solid 1px #C7E1FF;}
-		.tdStyle1 {background: #3a506b;border: solid 1px #C7E1FF;}
-		.tdStyle2 {background: #33465E;border: solid 1px #C7E1FF;}
+		.thRegular {padding: 4px; background: #4E6D91; border: solid 1px #C7E1FF;}
+		.thCategory {padding: 4px; background: #4E6D91; border: solid 1px #C7E1FF;}
+		.tdStyle1 {padding: 4px; background: #3a506b;border: solid 1px #C7E1FF;}
+		.tdStyle2 {padding: 4px; background: #33465E;border: solid 1px #C7E1FF;}
 		
 		.smallText {font-size: 12px}
 		.footer {text-align: center; font-size: 12px}
