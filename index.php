@@ -127,7 +127,7 @@ while($category=mysqli_fetch_array($categories))
 		print "<tr><td $themesettings[tdStyle1Attributes] class=\"tdStyle2\">$new</td>
 
 			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\"><a href=forum.php?id=$forum[id]>$forum[name]</a><br><div class=\"smalltext\">$forum[description]</div></td>
-			   <td $themesettings[tdStyle2Attributes] class=\"tdStyle2\">$numthreads</td><td $themesettings[tdStyle2Attributes] class=\"tdStyle2\">$numposts</td>
+			   <td $themesettings[tdStyle2Attributes] class=\"tdStyle2\" align=center>$numthreads</td><td $themesettings[tdStyle2Attributes] class=\"tdStyle2\" align=center>$numposts</td>
 			   <td $themesettings[tdStyle1Attributes] class=\"tdStyle1\">$lastpostdate<br>Last Post by: $lastpostuser</td></tr>";
 				
 	}
