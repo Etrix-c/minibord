@@ -115,8 +115,7 @@ INSERT INTO `headlinks` (`id`, `name`, `catid`, `displayorder`, `showwhenloggedo
 (5, 'Main', 2, 0, 1, 1, 0, 'index.php'),
 (6, 'Cookie Settings', 2, 0, 1, 1, 0, 'settings.php'),
 (7, 'Userlist', 2, 0, 1, 1, 0, 'userlist.php'),
-(8, 'RSS', 2, 0, 1, 1, 0, 'rss.php'),
-(11, 'Smilies', 2, 0, 1, 1, 0, 'smilies.php');
+(8, 'Smilies', 2, 0, 1, 1, 0, 'smilies.php');
 
 -- --------------------------------------------------------
 
