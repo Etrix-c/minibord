@@ -21,7 +21,7 @@ if(!empty($_GET['action']) && $_GET['action'] == "logout" && !empty($user))
  	setcookie("token", "");
 
 	printheader();
-	printmessage("thou hast been logged out");
+	printmessage("You been logged out");
 	printfooter();
 	die();
 
@@ -33,7 +33,7 @@ printheader();
 
 if(!empty($user))
 {
-	printmessage("thou cannot login while logged in");
+	printmessage("You are already logged in");
 	printfooter();
 	die();
 	
@@ -65,7 +65,7 @@ else if(!empty($_POST['username']) && !empty($_POST['password']) )
 	
 		if(!$verified)
 		{
-			printmessage("auth failed; please try again");
+			printmessage("Auth failed; please try again");
 		}
 
 		else
@@ -86,7 +86,7 @@ else if(!empty($_POST['username']) && !empty($_POST['password']) )
 
 else if(!empty($_POST['username']) && empty($_POST['password']))
 {
-	printmessage("you left your password blank");
+	printmessage("You left your password blank");
 
 
 	
@@ -94,14 +94,14 @@ else if(!empty($_POST['username']) && empty($_POST['password']))
 
 else if(empty($_POST['username']) && !empty($_POST['password']))
 {
-	printmessage("you left your username blank");
+	printmessage("You left your username blank");
 
 
 }
 
 else if(isset($_POST['username']) && isset($_POST['password']) )
 {
-	printmessage("thou must type before submitting");
+	printmessage("Fields must be type before submitting");
 }
 
 
